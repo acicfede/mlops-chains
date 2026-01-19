@@ -2,4 +2,4 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - enable-grafana.yaml
+  - github.com/acicfede/mlops-platform//modules/monitoring-tools/grafana/v1
