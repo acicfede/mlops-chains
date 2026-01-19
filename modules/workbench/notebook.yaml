@@ -5,7 +5,6 @@ metadata:
   labels:
     app: nuovo-workbench
   annotations:
-    argocd.argoproj.io/sync-wave: "3"
     notebooks.opendatahub.io/inject-oauth: "true"
     opendatahub.io/image-display-name: "Jupyter | PyTorch LLM Compressor | CUDA | Python 3.12"
     notebooks.opendatahub.io/last-image-selection: "jupyter-pytorch-llmcompressor:2025.2"
