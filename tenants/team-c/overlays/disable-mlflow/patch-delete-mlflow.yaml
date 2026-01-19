@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mlflow-server
+$patch: delete
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mlflow-server
+$patch: delete
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: mlflow
+$patch: delete
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: mlflow
+$patch: delete
