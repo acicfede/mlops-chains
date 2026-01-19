@@ -4,7 +4,7 @@ metadata:
   name: mlops-team-a
   namespace: openshift-gitops
 spec:
-  project: default
+  project: mlops
   source:
     repoURL: https://github.com/acicfede/mlops-chains.git
     targetRevision: main
