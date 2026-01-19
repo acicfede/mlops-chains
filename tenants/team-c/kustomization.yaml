@@ -5,5 +5,5 @@ namespace: mlops-team-c
 
 resources:
   - namespace.yaml
-  - ../../chains/chain-b
+  - ../../chain/chain-b
   - overrides/grafana
