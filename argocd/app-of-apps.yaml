@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mlops-chains
+  name: mlops-chains-root
   namespace: openshift-gitops
 spec:
   project: default
   source:
     repoURL: https://github.com/acicfede/mlops-chains.git
     targetRevision: main
-    path: tenants
+    path: argocd/applications
   destination:
     server: https://kubernetes.default.svc
     namespace: openshift-gitops
@@ -16,3 +16,4 @@ spec:
     automated:
       prune: true
       selfHeal: true
+
