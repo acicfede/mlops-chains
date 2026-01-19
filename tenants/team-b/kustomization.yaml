@@ -5,4 +5,4 @@ namespace: mlops-team-b
 
 resources:
   - namespace.yaml
-  - ../../chains/chain-b
+  - ../../chain/chain-b
