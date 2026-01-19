@@ -5,3 +5,4 @@ resources:
   - github.com/acicfede/mlops-platform//modules/workbench/v1
   - github.com/acicfede/mlops-platform//modules/pipelines/v1
   - github.com/acicfede/mlops-platform//modules/monitoring-tools/mlflow
+  
