@@ -7,4 +7,4 @@ resources:
   - namespace.yaml
   - ../../chain/chain-b
   - overrides/disable-mlflow
-  - modules/grafana
+  - ../../modules/grafana/
