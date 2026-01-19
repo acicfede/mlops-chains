@@ -6,5 +6,7 @@ namespace: mlops-team-c
 resources:
   - namespace.yaml
   - ../../chain/chain-b
-  - overrides/disable-mlflow
   - ../../modules/grafana/
+
+patches:
+  - overlays/disable-mlflow
