@@ -7,14 +7,6 @@ metadata:
   name: grafana-sa
 ---
 # =========================================================
-# ServiceAccount Token Refresher
-# =========================================================
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: grafana-token-refresher
----
-# =========================================================
 # Job – Grafana Prometheus Token Bootstrap (ArgoCD PreSync)
 # =========================================================
 apiVersion: batch/v1
