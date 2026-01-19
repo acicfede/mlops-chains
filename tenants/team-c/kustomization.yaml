@@ -6,5 +6,5 @@ namespace: mlops-team-c
 resources:
   - namespace.yaml
   - ../../chain/chain-a
-  - github.com/acicfede/mlops-platform//modules/monitoring-tools/mlflow/v1
+  - github.com/acicfede/mlops-platform//modules/monitoring-tools/mlflow
 
