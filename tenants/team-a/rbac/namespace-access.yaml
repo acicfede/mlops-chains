@@ -2,7 +2,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: team-a-admin
-  namespace: team-a
+  namespace: mlops-team-a
 subjects:
   - kind: User
     name: team-a
