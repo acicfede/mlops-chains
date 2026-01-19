@@ -8,5 +8,5 @@ resources:
   - ../../chain/chain-b
   - ../../modules/grafana/
 
-patches:
-  - overlays/disable-mlflow
+patchesStrategicMerge:
+  - overlays/disable-mlflow/patch-delete-mlflow.yaml
