@@ -4,5 +4,3 @@ metadata:
   name: redis-enterprise-operator-group
   namespace: $(OP_NAMESPACE)
 spec:
-  targetNamespaces:
-    - $(OP_NAMESPACE)
