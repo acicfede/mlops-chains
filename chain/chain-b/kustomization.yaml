@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
   - ../../modules/workbench
-  - github.com/acicfede/mlops-platform//modules/pipelines/v1
-  - ../../modules/mlflow/
+  - ../../modules/pipelines
+  - ../../modules/mlflow
 
   
