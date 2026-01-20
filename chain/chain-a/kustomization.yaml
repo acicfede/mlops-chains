@@ -6,5 +6,5 @@ resources:
   - ../../modules/workbench
   - ../../modules/minio
   - ../../modules/inference/granite-3-1-2b
-  - ../../modules/inference/redis
+  - ../../modules/redis
 
