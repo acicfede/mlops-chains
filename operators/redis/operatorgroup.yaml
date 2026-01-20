@@ -2,5 +2,7 @@ apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
 metadata:
   name: redis-enterprise-operator-group
+  namespace: $(OP_NAMESPACE)
 spec:
-  targetNamespaces: []   # 👈 IMPORTANTISSIMO
+  targetNamespaces:
+    - $(OP_NAMESPACE)
