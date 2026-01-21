@@ -6,6 +6,6 @@ namespace: mlops-team-a
 resources:
   - namespace.yaml
   - rbac/namespace-access.yaml
-  - ../../chain/chain-a
-  - ../../operators/redis
+  - ../../operators/redis      # 👈 PRIMA l’Operator
+  - ../../chain/chain-a       # 👈 POI i moduli che usano Redis
 
