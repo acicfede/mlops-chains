@@ -6,6 +6,7 @@ namespace: mlops-team-b
 resources:
   - namespace.yaml
   - rbac/namespace-access.yaml
+  - ../../operators/redis
   - ../../chain/chain-b
 
 
