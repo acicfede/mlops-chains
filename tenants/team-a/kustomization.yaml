@@ -9,3 +9,6 @@ resources:
   - ../../operators/redis      # 👈 PRIMA l’Operator
   - ../../chain/chain-a       # 👈 POI i moduli che usano Redis
 
+patchesStrategicMerge:
+  - og-patch.yaml
+
