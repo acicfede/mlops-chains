@@ -11,7 +11,7 @@ spec:
   project: team-a
 
   source:
-    repoURL: https://github.com/tuo-org/tuo-repo.git
+    repoURL: https://github.com/acicfede/mlops-chains.git
     targetRevision: main
     path: tenants/team-a
 
