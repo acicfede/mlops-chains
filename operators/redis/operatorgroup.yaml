@@ -3,3 +3,4 @@ kind: OperatorGroup
 metadata:
   name: redis-enterprise-operator-group
 spec:
+  # NIENTE targetNamespaces
