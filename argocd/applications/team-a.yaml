@@ -1,18 +1,28 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mlops-team-a
+  name: tenant-team-a
   namespace: openshift-gitops
+  labels:
+    layer: tenant
+    team: team-a
+    env: prod
 spec:
-  project: mlops
+  project: team-a
+
   source:
-    repoURL: https://github.com/acicfede/mlops-chains.git
+    repoURL: https://github.com/tuo-org/tuo-repo.git
     targetRevision: main
     path: tenants/team-a
+
   destination:
     server: https://kubernetes.default.svc
     namespace: mlops-team-a
+
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+
