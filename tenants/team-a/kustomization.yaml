@@ -6,8 +6,8 @@ namespace: mlops-team-a
 resources:
   - namespace.yaml
   - rbac/namespace-access.yaml
-  - ../../operators/redis      # 👈 PRIMA l’Operator
-  - ../../chain/chain-a       # 👈 POI i moduli che usano Redis
+  - ../../operators/redis     
+  - ../../chain/chain-1       
 
 patchesStrategicMerge:
   - og-patch.yaml
