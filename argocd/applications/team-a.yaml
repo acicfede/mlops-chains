@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: tenant-team-a
+  name: mlops-team-a
   namespace: openshift-gitops
   labels:
     layer: tenant
