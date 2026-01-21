@@ -7,3 +7,7 @@ resources:
   - namespace.yaml
   - rbac/namespace-access.yaml
   - ../../chain/chain-b
+
+
+patchesStrategicMerge:
+  - og-patch.yaml
