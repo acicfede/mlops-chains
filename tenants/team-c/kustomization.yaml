@@ -6,8 +6,5 @@ namespace: mlops-team-c
 resources:
   - namespace.yaml
   - rbac/namespace-access.yaml
-  - ../../chain/chain-b
-  - ../../modules/grafana/
+  - ../../chain/chain-2
 
-patchesStrategicMerge:
-  - overlays/disable-mlflow/patch-delete-mlflow.yaml
