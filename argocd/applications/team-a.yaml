@@ -8,7 +8,7 @@ metadata:
     team: team-a
     env: prod
 spec:
-  project: team-a
+  project: mlops
 
   source:
     repoURL: https://github.com/acicfede/mlops-chains.git
