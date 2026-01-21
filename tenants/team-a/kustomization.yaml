@@ -7,5 +7,5 @@ resources:
   - namespace.yaml
   - rbac/namespace-access.yaml
   - ../../chain/chain-a
-
+  - ../../operators/redis
 
