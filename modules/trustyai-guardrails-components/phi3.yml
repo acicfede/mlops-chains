@@ -6,7 +6,6 @@ kind: ServingRuntime
 metadata:
   name: vllm-runtime
   annotations:
-    argocd.argoproj.io/sync-wave: "0"
     openshift.io/display-name: vLLM ServingRuntime for KServe
     opendatahub.io/template-display-name: vLLM ServingRuntime for KServe
     opendatahub.io/recommended-accelerators: '["nvidia.com/gpu"]'
