@@ -7,6 +7,6 @@ resources:
   - ../../modules/pipelines
   - ../../modules/mlflow
   - ../../modules/inference/granite-3-1-2b
-  - ../../modules/serving-runtime/granite-3-1-2b
+  - ../../modules/serving-runtime/granite
 
   
