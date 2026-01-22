@@ -1,0 +1,96 @@
+# =========================
+# ServingRuntime - vLLM
+# =========================
+apiVersion: serving.kserve.io/v1alpha1
+kind: ServingRuntime
+metadata:
+  name: vllm-runtime
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+    openshift.io/display-name: vLLM ServingRuntime for KServe
+    opendatahub.io/template-display-name: vLLM ServingRuntime for KServe
+    opendatahub.io/recommended-accelerators: '["nvidia.com/gpu"]'
+  labels:
+    opendatahub.io/dashboard: 'true'
+spec:
+  annotations:
+    prometheus.io/path: /metrics
+    prometheus.io/port: '8080'
+    openshift.io/display-name: vLLM ServingRuntime for KServe
+  labels:
+    opendatahub.io/dashboard: 'true'
+  multiModel: false
+  supportedModelFormats:
+    - autoSelect: true
+      name: vLLM
+  containers:
+    - name: kserve-container
+      image: quay.io/modh/vllm@sha256:0d55419f3d168fd80868a36ac89815dded9e063937a8409b7edf3529771383f3
+      command:
+        - python
+        - -m
+        - vllm.entrypoints.openai.api_server
+      args:
+        - --port=8080
+        - --model=/mnt/models
+        - --served-model-name={{.Name}}
+        - --dtype=float16
+        - --enforce-eager
+      env:
+        - name: HF_HOME
+          value: /tmp/hf_home
+        - name: VLLM_CACHE_ROOT
+          value: /tmp/
+      ports:
+        - containerPort: 8080
+          protocol: TCP
+      volumeMounts:
+        - mountPath: /dev/shm
+          name: shm
+  volumes:
+    - name: shm
+      emptyDir:
+        medium: Memory
+        sizeLimit: 2Gi
+---
+# =========================
+# InferenceService - Phi-3
+# =========================
+apiVersion: serving.kserve.io/v1beta1
+kind: InferenceService
+metadata:
+  name: phi3
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+    openshift.io/display-name: phi3
+    serving.knative.openshift.io/enablePassthrough: 'true'
+    security.opendatahub.io/enable-auth: 'true'
+    serving.kserve.io/deploymentMode: RawDeployment
+    sidecar.istio.io/inject: 'true'
+    sidecar.istio.io/rewriteAppHTTPProbers: 'true'
+  labels:
+    opendatahub.io/dashboard: 'true'
+spec:
+  predictor:
+    minReplicas: 1
+    maxReplicas: 1
+    tolerations:
+      - key: nvidia.com/gpu
+        operator: Exists
+        effect: NoSchedule
+    model:
+      runtime: vllm-runtime
+      modelFormat:
+        name: vLLM
+      resources:
+        requests:
+          cpu: "2"
+          memory: 8Gi
+          nvidia.com/gpu: "1"
+        limits:
+          cpu: "2"
+          memory: 8Gi
+          nvidia.com/gpu: "1"
+      storage:
+        key: aws-connection-data-connection
+        path: Phi-3-mini-4k-instruct
