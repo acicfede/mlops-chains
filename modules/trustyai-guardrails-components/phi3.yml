@@ -60,7 +60,6 @@ kind: InferenceService
 metadata:
   name: phi3
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
     openshift.io/display-name: phi3
     serving.knative.openshift.io/enablePassthrough: 'true'
     security.opendatahub.io/enable-auth: 'true'
