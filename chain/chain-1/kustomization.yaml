@@ -9,3 +9,4 @@ resources:
   - ../../modules/redis
   - ../../modules/serving-runtime/granite
   - ../../modules/grafana
+  - ../../modules/trustyai-guardrails-components
