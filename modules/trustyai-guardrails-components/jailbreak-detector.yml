@@ -3,7 +3,6 @@ kind: InferenceService
 metadata:
   name: jailbreak-detector
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
     openshift.io/display-name: jailbreak-detector
     serving.knative.openshift.io/enablePassthrough: 'true'
     sidecar.istio.io/inject: 'true'
