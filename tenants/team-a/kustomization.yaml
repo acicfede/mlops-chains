@@ -6,8 +6,17 @@ namespace: mlops-team-a
 resources:
   - namespace.yaml
   - rbac/namespace-access.yaml
-  - ../../operators/redis     
-  - ../../chain/chain-1       
+  - ../../operators/redis
+  - ../../chain/chain-1
+
+vars:
+  - name: NAMESPACE
+    objref:
+      apiVersion: v1
+      kind: Namespace
+      name: mlops-team-a
+    fieldref:
+      fieldpath: metadata.name
 
 patchesStrategicMerge:
   - og-patch.yaml
