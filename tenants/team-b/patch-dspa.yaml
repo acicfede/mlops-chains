@@ -1,0 +1,8 @@
+apiVersion: datasciencepipelinesapplications.opendatahub.io/v1
+kind: DataSciencePipelinesApplication
+metadata:
+  name: dspa
+spec:
+  objectStorage:
+    externalStorage:
+      host: minio-service.mlops-team-b.svc
