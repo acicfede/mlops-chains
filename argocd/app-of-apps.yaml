@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: mlops-chains-root
-  namespace: openshift-gitops
+  namespace: default
 spec:
   project: mlops
   source:
