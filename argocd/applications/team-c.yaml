@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mlops-team-c
+  namespace: openshift-gitops
+spec:
+  project: mlops
+  source:
+    repoURL: https://github.com/acicfede/mlops-chains.git
+    targetRevision: main
+    path: tenants/team-c
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: mlops-team-c
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
