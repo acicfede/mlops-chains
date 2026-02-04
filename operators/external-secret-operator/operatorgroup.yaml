@@ -3,6 +3,8 @@ kind: OperatorGroup
 metadata:
   name: external-secrets-operator-group
   namespace: cyberark-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
 spec:
   targetNamespaces:
     - cyberark-demo
