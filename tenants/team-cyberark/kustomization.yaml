@@ -6,7 +6,7 @@ namespace: cyberark-demo
 resources:
   - namespace.yaml
   - rbac/namespace-access.yaml
-  - ../../chain/chain-2
+  - ../../chain/chain-1
 
 
 patchesStrategicMerge:
