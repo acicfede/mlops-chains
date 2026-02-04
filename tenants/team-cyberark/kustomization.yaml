@@ -13,3 +13,4 @@ resources:
 
 patchesStrategicMerge:
   - patch-dspa.yaml
+  - og-patch.yaml
