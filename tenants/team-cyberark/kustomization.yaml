@@ -7,4 +7,5 @@ resources:
   - namespace.yaml
   - rbac/namespace-access.yaml
   - ../../operators/external-secret-operator
+  - ../../modules/minio
 
