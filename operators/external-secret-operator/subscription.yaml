@@ -5,7 +5,7 @@ metadata:
   namespace: cyberark-demo
 spec:
   channel: stable
-  name: external-secrets
+  name: external-secrets-operator
   source: community-operators
   sourceNamespace: openshift-marketplace
   installPlanApproval: Automatic
