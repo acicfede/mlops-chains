@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: minio-pvc
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "4"
 spec:
   accessModes:
     - ReadWriteOnce
