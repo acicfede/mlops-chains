@@ -4,6 +4,6 @@ kind: Kustomization
 
 
 resources:
-  - redis-database-externalsecret.yaml
+  - redis-database-external-secret.yaml
   - redis-cluster.yaml
   - redis-database.yaml
