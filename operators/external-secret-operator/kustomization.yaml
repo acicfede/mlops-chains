@@ -5,3 +5,4 @@ kind: Kustomization
 resources:
   - sa.yaml
   - secretstore.yaml
+  - operatorconfig.yaml
