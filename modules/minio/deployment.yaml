@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-annotations:
-  argocd.argoproj.io/sync-wave: "5"
   name: minio
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
 spec:
   replicas: 1
   selector:
@@ -54,3 +54,4 @@ spec:
               port: 9000
             initialDelaySeconds: 30
             periodSeconds: 5
+
