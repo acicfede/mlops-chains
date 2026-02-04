@@ -8,7 +8,7 @@ resources:
   - rbac/namespace-access.yaml
   - ../../operators/redis
   - ../../operators/external-secret-operator
-  - ../../chain/chain-1
+  - ../../chain/chain-3
 
 
 patchesStrategicMerge:
