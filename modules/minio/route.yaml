@@ -2,6 +2,8 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: minio-api
+  annotations:
+    argocd.argoproj.io/sync-wave: "7"
 spec:
   to:
     kind: Service
