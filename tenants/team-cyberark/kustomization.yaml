@@ -6,6 +6,11 @@ namespace: cyberark-demo
 resources:
   - namespace.yaml
   - rbac/namespace-access.yaml
+  - ../../operators/redis
   - ../../operators/external-secret-operator
-  - ../../modules/minio
+  - ../../chain/chain-1
 
+
+patchesStrategicMerge:
+  - patch-dspa.yaml
+  - og-patch.yaml
