@@ -3,6 +3,8 @@ kind: Kustomization
 
 
 resources:
+  - operatorgroup.yaml
+  - subscription.yaml
   - sa.yaml
-  - secretstore.yaml
   - operatorconfig.yaml
+  - secretstore.yaml
