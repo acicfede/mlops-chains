@@ -1,12 +1,11 @@
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
-  name: external-secrets-operator
+  name: external-secrets
   namespace: cyberark-demo
 spec:
-  channel: alpha
-  name: external-secrets-operator
+  channel: stable
+  name: external-secrets
   source: community-operators
   sourceNamespace: openshift-marketplace
   installPlanApproval: Automatic
-  startingCSV: external-secrets-operator.v0.11.0
