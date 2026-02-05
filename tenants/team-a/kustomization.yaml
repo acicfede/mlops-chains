@@ -6,10 +6,4 @@ namespace: mlops-team-a
 resources:
   - namespace.yaml
   - rbac/namespace-access.yaml
-  - ../../operators/redis
-  - ../../chain/chain-1
-
-patchesStrategicMerge:
-  - og-patch.yaml
-  - patch-dspa.yaml
 
