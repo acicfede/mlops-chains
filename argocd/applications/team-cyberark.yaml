@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mlops-team-cyberark
+  namespace: openshift-gitops
+spec:
+  project: mlops
+  source:
+    repoURL: https://github.com/acicfede/mlops-chains.git
+    targetRevision: main
+    path: tenants/team-cyberark
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: cyberark-demo
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
