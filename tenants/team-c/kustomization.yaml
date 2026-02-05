@@ -6,8 +6,3 @@ namespace: mlops-team-c
 resources:
   - namespace.yaml
   - rbac/namespace-access.yaml
-  - ../../chain/chain-2
-
-
-patchesStrategicMerge:
-  - patch-dspa.yaml
