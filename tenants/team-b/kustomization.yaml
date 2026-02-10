@@ -1,4 +1,4 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
+piVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 namespace: mlops-team-b
@@ -6,4 +6,11 @@ namespace: mlops-team-b
 resources:
   - namespace.yaml
   - rbac/namespace-access.yaml
+  - ../../operators/redis
+  - ../../chain/chain-1
+
+
+patchesStrategicMerge:
+  - og-patch.yaml
+  - patch-dspa.yaml
 
